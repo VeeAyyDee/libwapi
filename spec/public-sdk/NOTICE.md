@@ -1,0 +1,1 @@
+These two header excerpts are copied public SDK declarations, not original prose. Source is the pinned local ESP-IDF tree, Apache-2.0 with notices retained. All other prose in this specification was independently written. No private vendor implementation is copied here.

@@ -1,0 +1,5 @@
+Fresh implementation and tests: MPL-2.0; see LICENSE.
+Supplied SDK declaration excerpts under spec/public-sdk retain their original
+Apache-2.0 notices; see LICENSES/Apache-2.0.txt.
+Standard SM4 constants are algorithm data; provenance is recorded in provenance.json.
+No Espressif binary library is included.

@@ -1,0 +1,299 @@
+{
+  "meaning": "Semantic implementation mapping for42specified bodies; not an execution/path coverage claim. Runtime diagnostic logs omitted as documented.",
+  "bodies": [
+    {
+      "specification_body": "sms4_crypt",
+      "public": false,
+      "fresh_file": "src/crypto.c",
+      "fresh_functions": "transform",
+      "note": ""
+    },
+    {
+      "specification_body": "sms4_key_expansion",
+      "public": false,
+      "fresh_file": "src/crypto.c",
+      "fresh_functions": "expand_key",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_wpi_crypt_part_0",
+      "public": false,
+      "fresh_file": "src/crypto.c",
+      "fresh_functions": "crypt_feedback",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_wpi_encrypt",
+      "public": true,
+      "fresh_file": "src/crypto.c",
+      "fresh_functions": "wapi_sm_wpi_encrypt",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_wpi_decrypt",
+      "public": true,
+      "fresh_file": "src/crypto.c",
+      "fresh_functions": "wapi_sm_wpi_decrypt",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_wpi_calc_mic",
+      "public": true,
+      "fresh_file": "src/crypto.c",
+      "fresh_functions": "wapi_sm_wpi_calc_mic",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_put_be32",
+      "public": false,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_set_assoc_wapi_ie_default",
+      "note": "Selector emission is expressed directly."
+    },
+    {
+      "specification_body": "wapi_selector_to_bitfield",
+      "public": false,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "selector",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_neg_complete",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_neg_complete",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_parse_wapi_ie",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_parse_wapi_ie",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_supplicant_key_neg_complete",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_supplicant_key_neg_complete",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_set_param",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_set_param",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_get_param",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_get_param",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_set_assoc_wapi_ie_default",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_set_assoc_wapi_ie_default",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_set_ap_wapi_ie",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_set_ap_wapi_ie",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_set_header",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_set_header",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_asue_challenge",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_asue_challenge",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_check_header",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_check_header",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_notify_assoc",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "notify_assoc",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_get_bssid",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "get_bssid",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_set_bssid",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "set_bssid",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_txcb",
+      "public": true,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "wapi_txcb",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_set_key",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "set_key",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_ether_send",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "ether_send",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_validate_pdu",
+      "public": false,
+      "fresh_file": "src/packet.c",
+      "fresh_functions": "valid_fragment",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_check_addid",
+      "public": false,
+      "fresh_file": "src/packet.c",
+      "fresh_functions": "check_addid",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_check_mic",
+      "public": false,
+      "fresh_file": "src/packet.c",
+      "fresh_functions": "check_mic",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_set_ap_wapi_ie",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "ap_ie",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_set_assoc_wapi_ie",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "association_ie",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_parse_wapi_ie",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "parse_ie",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_mk_mic_constprop_0_isra_0",
+      "public": false,
+      "fresh_file": "src/packet.c",
+      "fresh_functions": "make_mic",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_check_uskid_constprop_0_isra_0",
+      "public": false,
+      "fresh_file": "src/packet.c",
+      "fresh_functions": "unicast_request, unicast_confirmation, multicast_announcement",
+      "note": "Direct0/1 checks at each use."
+    },
+    {
+      "specification_body": "key_derivation_hmac_sha256",
+      "public": true,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "key_derivation_hmac_sha256",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_derive_base_key",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "derive_base_key",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_unicast_1_3",
+      "public": false,
+      "fresh_file": "src/packet.c",
+      "fresh_functions": "unicast_request",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_deinit",
+      "public": true,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "wapi_sm_deinit",
+      "note": ""
+    },
+    {
+      "specification_body": "esp_wifi_internal_wapi_deinit",
+      "public": true,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "esp_wifi_internal_wapi_deinit",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_set_own_addr",
+      "public": true,
+      "fresh_file": "src/glue.c",
+      "fresh_functions": "wapi_sm_set_own_addr",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_init",
+      "public": true,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "wapi_sm_init",
+      "note": ""
+    },
+    {
+      "specification_body": "esp_wifi_internal_wapi_init",
+      "public": true,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "esp_wifi_internal_wapi_init",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_process_packet_type",
+      "public": true,
+      "fresh_file": "src/packet.c",
+      "fresh_functions": "wapi_process_packet_type",
+      "note": ""
+    },
+    {
+      "specification_body": "wapi_sm_rx_pkt",
+      "public": false,
+      "fresh_file": "src/lifecycle.c",
+      "fresh_functions": "receive",
+      "note": ""
+    }
+  ]
+}

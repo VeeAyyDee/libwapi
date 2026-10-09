@@ -1,0 +1,8 @@
+Supervisor independent comparison found an association-IE output-residue mismatch.
+When caller capacity is at least24 but AKM, pairwise or group selector is invalid,
+the original sets output byte1 (length) to0 before validation. It commits22 only
+after successful IE construction. Current fresh output commits22 immediately.
+Preserve return code, context, other output bytes and pointer/callback behavior.
+Concrete defined example: capacity24, AKM0 yields prefix44 00 01 00 01 00 on failure.
+Please correct semantic construction ordering and add regression cases covering
+each selector failure and successful commit. No original implementation attached.

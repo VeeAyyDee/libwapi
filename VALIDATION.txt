@@ -1,0 +1,54 @@
+Release disposition, 2026-10-08
+EXPERIMENTAL — REAL WAPI-AP INTEROPERABILITY UNTESTED
+
+Released for evaluation as the current implementation, with no implementation
+changes for this disposition. Original-versus-fresh checks provide bounded
+compatibility evidence, not exhaustive equivalence. No real WAPI AP handshake,
+rekeying or protected network traffic has been validated. This qualification
+applies specifically to end-to-end WAPI interoperability; native and on-board
+crypto tests have been performed as detailed below.
+
+Supervisor validation, 2026-10-08
+
+324 bounded crypto comparisons: original Xtensa vs fresh native implementation,
+including aliasing, tails, zero length and key/IV/buffer preservation; encryption
+and MIC also checked using independent OpenSSL SM4 primitives.
+339 state/protocol comparisons: original instructions vs fresh native execution
+with real HMAC-SHA256 and modeled allocation/radio/driver boundaries. Checked
+context fields, buffer contents, callback order, generated frames and installed
+keys. Covered39 original bodies/2377 instructions in this suite; not exhaustive.
+One association-IE failure residue bug found and fixed before final comparison.
+Target archive audit: exact21 function+4 data exports; data sizes, writability,
+constants, revision text and minimum alignment match ESP32-S3 IDF6.0.3.
+
+Combined firmware builds and provenance audit passed. Controlled two-board
+vendor/vendor, fresh/fresh and mixed cold/warm testing passed6 rounds/12boots,
+1824 firmware assertions,204 ESP-NOW deliveries,12 wrong-key rejections, BLE
+peer traffic,60 SmartConfig lifecycle checks and6 provisioning/DHCP/UDP rounds.
+All5 fresh libraries are selected together. Across both vendor and fresh boards,
+432 WAPI crypto vector checks match; encryption/MIC also match OpenSSL.
+Calibration was saved/reused; both full16MiB original images restored and
+verified. No real WAPI access-point authentication was tested.
+No certificate authentication is implemented by the pinned archive or invented
+here. Full RF/load/security certification and exhaustive equivalence are not
+claimed. Tests use synthetic inputs, not private network/device data.
+
+Independent-reference checks, 2026-10-08
+
+1,440 crypto comparisons against compiled Realtek WAPI routines passed:
+288 encryption, 288 reverse-round feedback, and 864 MIC comparisons. The
+comparison accounts for IV byte order and separately padded MIC segments.
+Realtek's standard public OFB decrypt differs from Espressif's reversed-round
+public decrypt; the latter is intentionally preserved, not claimed standard.
+
+16 independent synthetic peer exchanges passed, checking unicast reply MICs,
+confirmation processing, Realtek-wrapped multicast secrets, group reply MICs,
+and installed keys. Expected keys use Python HMAC-SHA256 and peer-visible
+nonces, not the original interpreter or fresh private state. This peer is a
+bounded supervisor test, not a complete third-party WAPI authenticator.
+Wireshark 4.2.2 parsed all 80 exchanged synthetic packets without malformed
+errors; checked header and payload fields matched. Parsing does not validate
+authentication. These checks add no real-AP or RF interoperability claim.
+
+No implementation changes were needed. Independent GPL reference code and
+supervisor scaffolding are not incorporated in this source release.

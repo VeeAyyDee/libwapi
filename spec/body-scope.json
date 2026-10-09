@@ -1,0 +1,296 @@
+[
+  {
+    "name": "sms4_crypt",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:1:wapi_sms4_algo.o",
+    "instruction_count": 222
+  },
+  {
+    "name": "sms4_key_expansion",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:1:wapi_sms4_algo.o",
+    "instruction_count": 184
+  },
+  {
+    "name": "wapi_sm_wpi_crypt_part_0",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:1:wapi_sms4_algo.o",
+    "instruction_count": 61
+  },
+  {
+    "name": "wapi_sm_wpi_encrypt",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:1:wapi_sms4_algo.o",
+    "instruction_count": 13
+  },
+  {
+    "name": "wapi_sm_wpi_decrypt",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:1:wapi_sms4_algo.o",
+    "instruction_count": 13
+  },
+  {
+    "name": "wapi_sm_wpi_calc_mic",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:1:wapi_sms4_algo.o",
+    "instruction_count": 73
+  },
+  {
+    "name": "wapi_put_be32",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 13
+  },
+  {
+    "name": "wapi_selector_to_bitfield",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 20
+  },
+  {
+    "name": "wapi_neg_complete",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 4
+  },
+  {
+    "name": "wapi_sm_parse_wapi_ie",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 194
+  },
+  {
+    "name": "wapi_supplicant_key_neg_complete",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 39
+  },
+  {
+    "name": "wapi_sm_set_param",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 19
+  },
+  {
+    "name": "wapi_sm_get_param",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 19
+  },
+  {
+    "name": "wapi_sm_set_assoc_wapi_ie_default",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 124
+  },
+  {
+    "name": "wapi_sm_set_ap_wapi_ie",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 40
+  },
+  {
+    "name": "wapi_sm_set_header",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 19
+  },
+  {
+    "name": "wapi_sm_asue_challenge",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 15
+  },
+  {
+    "name": "wapi_sm_check_header",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:2:wapi_glue.o",
+    "instruction_count": 60
+  },
+  {
+    "name": "wapi_sm_notify_assoc",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 7
+  },
+  {
+    "name": "wapi_get_bssid",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 10
+  },
+  {
+    "name": "wapi_set_bssid",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 12
+  },
+  {
+    "name": "wapi_txcb",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 63
+  },
+  {
+    "name": "wapi_set_key",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 25
+  },
+  {
+    "name": "wapi_sm_ether_send",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 47
+  },
+  {
+    "name": "wapi_validate_pdu",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 78
+  },
+  {
+    "name": "wapi_check_addid",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 30
+  },
+  {
+    "name": "wapi_check_mic",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 36
+  },
+  {
+    "name": "wapi_set_ap_wapi_ie",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 9
+  },
+  {
+    "name": "wapi_set_assoc_wapi_ie",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 20
+  },
+  {
+    "name": "wapi_parse_wapi_ie",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 29
+  },
+  {
+    "name": "wapi_mk_mic_constprop_0_isra_0",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 24
+  },
+  {
+    "name": "wapi_check_uskid_constprop_0_isra_0",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 14
+  },
+  {
+    "name": "key_derivation_hmac_sha256",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 45
+  },
+  {
+    "name": "wapi_derive_base_key",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 47
+  },
+  {
+    "name": "wapi_unicast_1_3",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 222
+  },
+  {
+    "name": "wapi_sm_deinit",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 32
+  },
+  {
+    "name": "esp_wifi_internal_wapi_deinit",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 5
+  },
+  {
+    "name": "wapi_sm_set_own_addr",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 8
+  },
+  {
+    "name": "wapi_sm_init",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 135
+  },
+  {
+    "name": "esp_wifi_internal_wapi_init",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 5
+  },
+  {
+    "name": "wapi_process_packet_type",
+    "public": true,
+    "bind": "STB_GLOBAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 504
+  },
+  {
+    "name": "wapi_sm_rx_pkt",
+    "public": false,
+    "bind": "STB_LOCAL",
+    "object": "libwapi:3:wapi.o",
+    "instruction_count": 80
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "pinned_target": "ESP32-S3 ESP-IDF 6.0.3",
+  "original_objects": {
+    "research/extracted/libwapi/0001_wapi_sms4_algo.o": "b7dd54d1702fadc211c43227c0440b16676cb29a1522957250c82e44e08bf72f",
+    "research/extracted/libwapi/0002_wapi_glue.o": "2f712e4f4bd69be0e5ea1e7598d65bdf70120391d77b3f8e98f5e7d8607039a5",
+    "research/extracted/libwapi/0003_wapi.o": "1da1fce70f1c458635dbf077f9d9444eb1bc6a330a5624ccb8fe7b3a67ae1b64"
+  },
+  "method": "Behavioral specification derived from pinned original objects and original-only disassembly/decompilation, expressed anew; implementation source excluded.",
+  "executable_bytes_in_bundle": false
+}

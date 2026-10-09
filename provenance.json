@@ -1,0 +1,102 @@
+{
+  "format_version": 1,
+  "implementation_license": "MPL-2.0",
+  "public_sdk_excerpts_license": "Apache-2.0; original notices retained",
+  "target": {
+    "chip": "ESP32-S3",
+    "sdk": "ESP-IDF 6.0.3",
+    "pointer_bits": 32,
+    "archive": "libwapi.a"
+  },
+  "method": "Original semantic C authored solely from the supplied behavioral prose, ABI inventory, standard SM4 data constants and public declaration excerpts. No original executable, decompiled source, installed SDK, private oracle, network, credentials or hardware accessed by the implementation author.",
+  "input_sha256": {
+    "spec/01-abi-crypto-and-context.md": "5ae89f3ea6f664ebd31e42ffc044ae08318d314a86f997e8cd69dac0d658f88d",
+    "spec/02-ie-header-lifecycle.md": "970cd935e256be869583020830b924ad3e77e05f3bf4082a827545552c78f311",
+    "spec/03-packet-state-machine.md": "13cefdb0b69214cd58105dcaf6bf95b4300e3d2603af5488c2368412fd195101",
+    "spec/04-coverage-and-limits.md": "8094d012c27a763d4d106d430883cf91195a1d3e328e3f69b184ff4a82989b4e",
+    "spec/README.md": "cc7611c0e4b5bab5aff9fa1b414a1e7afcfc587ae425fd036e94264ae7a84392",
+    "spec/SUPERVISOR-FEEDBACK-01.txt": "d6c95f913fc1d2edf4ee19344b30e7ef2e90130375f71459fa5a70bd0c70b7ef",
+    "spec/body-scope.json": "fd1e23bcee0a8df3695097a57cb7c0ff44a59a86c746f06d58531887eb0d7bfb",
+    "spec/dependencies.json": "7eced7bcaf249865678af5d95513dad1cab9c5205412e496413f5984ac6f5099",
+    "spec/export-data.json": "42e66066f3c0e3eb71031499ac0c96388e176b2986e259b7400ce83376fb4d22",
+    "spec/provenance.json": "d4100b3d3bdee7e1dc3527aba44e71334dcf1f2850752b1b3102061a54fd38bf",
+    "spec/public-sdk/NOTICE.md": "dafbdd89838008ff7262862d8e289d6e0c1ec5664dca114fbc20bd26cda5e584",
+    "spec/public-sdk/crypto-declaration.h": "5c659a399a944e59d602e7e206c20dcefcb987c0f843b05d16eb8a65c44e451b",
+    "spec/public-sdk/wifi-declarations.h": "8d3771cbc4490da5ad29e8b81524e15c3738164766b3e246b40d86f42a4cb2a3"
+  },
+  "source_origins": {
+    "src/constants.c": "Standard SM4 numeric constants from spec/export-data.json; revision pointer from spec/README.md",
+    "src/crypto.c": "Independent implementation of spec/01 SM4/feedback/MIC descriptions",
+    "src/glue.c": "Independent implementation of spec/01 and spec/02",
+    "src/lifecycle.c": "Independent implementation of spec/01, spec/02 and receive boundary in spec/03",
+    "src/packet.c": "Independent implementation of spec/03",
+    "include/wapi.h": "Fresh inferred ABI declarations from spec/01; not copied SDK source",
+    "spec/public-sdk": "Supplied public declarations with original Apache-2.0 notices",
+    "tests": "Fresh bounded host tests; standard SM4 vector and deterministic fake HMAC callback"
+  },
+  "implemented_public_functions": 21,
+  "implemented_public_data": 4,
+  "validation": {
+    "native_make": "pass",
+    "native_cmake_ctest": "2/2 pass",
+    "export_audit": "21 strong T + 3 R + 1 D symbols; native revision pointer width allowed",
+    "asan_ubsan": "pass with detect_leaks=0; LSan unavailable under tracing",
+    "independent_crypto": "Supervisor reported 324 comparisons passed; private artifacts not read",
+    "target_link": "Owned by supervisor, not claimed here",
+    "hardware": "Not performed",
+    "host_registered_callback_coverage": "Receive replay sequence behavior, oversized supplied length deauthentication, txcb mutating reversal, basekey and IE bridges; HMAC output lengths0..96"
+  },
+  "known_divergences": [
+    "Diagnostic logs omitted",
+    "Negative HMAC output length and missing callback leave output unchanged; original undefined cases excluded"
+  ],
+  "limitations": [
+    "Host pointers differ in width; all documented target context offsets asserted for32bit builds",
+    "Host fake digest verifies framing/state only; actual HMAC is delegated to SDK",
+    "Unsafe undefined original pointer/length, fragment allocation and oversized IE cases are not certified",
+    "No RF equivalence or complete security review",
+    "Source provenance pins supplied specification, not independently verified original binaries"
+  ],
+  "semantic_body_mapping": "body-coverage.json",
+  "source_sha256": {
+    "src/constants.c": "402bd39011fa21dd5af38f32ab09ea9095c2e097ba529deea59393fad0b53991",
+    "src/crypto.c": "7ddae5ad7e84ce5a75d473b2433c2e65cfa04e4566552df7b1217987e2c1d377",
+    "src/glue.c": "b35a156b3086a1ec7e867f83947ce7c3b9d3ffcafb2317e39f5aac786afa6d5b",
+    "src/lifecycle.c": "b5572289c97aa04595be0fc6ecccccb3ea92dfececbb25bae48b4f4182b10280",
+    "src/packet.c": "843ea60225aface305ac35bcabac27284b3bc93ce046e9c3c1e7f249e7a75ae8",
+    "src/internal.h": "cd03c8f07d85a7e65d14dc4c8d5ef16e81ed6c524c9b37abd60f1e17c0253207",
+    "src/platform.h": "e7695c865b404f9d0ea15643dbe34d29ec879e8a7753e841101dcf02ec7f457f",
+    "include/wapi.h": "6b1cc17065db004be8e0435fc802b4d575b1744104ff643810262db37fbfb84f",
+    "tests/audit_exports.py": "38b6ede1af01e7502ad9578a118192e2e82e857ac619d66819d453404ad03b0c",
+    "tests/test_crypto.c": "2d931f04580ba1735d8451dd03edccac4809027d7a3cbf9eb638948270dfd499",
+    "tests/test_protocol.c": "7f7e39d406054c5460e9a138247b5ae0c6fc615d8c0f37280622ba4028d491e8",
+    "cmake/replace_wapi.cmake": "decaf8fb8cac94ef9babe5c302735ecba3110505a44df60020d78e2cd2ab079b",
+    "CMakeLists.txt": "72c4ddcaf8abba7ab1659f98d3f756795a4de0545627abf045b5e04d5f0e5de4",
+    "Makefile": "f1a0369f20ea1d8f294ee4715a65a76d253acbe265fcaab81bc18f1bab0680e2",
+    "body-coverage.json": "89dba9377e0b0c2d53eecf3a86495fe09a46d6cf144a8513d10736b9b43bdab4"
+  },
+  "supervisor_feedback": [
+    "SUPERVISOR-FEEDBACK-01: association IE length byte committed only after successful selector construction; failure residue regression covers all three selector failures."
+  ],
+  "supervisor_release_status": {
+    "date": "2026-10-08",
+    "maturity": "experimental",
+    "real_wapi_ap_interoperability": "untested",
+    "complete_equivalence": "not_established",
+    "original_vs_fresh_crypto_cases": 324,
+    "original_vs_fresh_state_protocol_cases": 339,
+    "target_export_data_audit": "pass",
+    "combined_hardware_wapi_crypto_checks_across_vendor_and_fresh_builds": 432,
+    "implementation_changed_for_release_status": false,
+    "note": "The validation section above records implementation-author activity; supervisor testing is summarized here and in VALIDATION.txt.",
+    "independent_reference_review": {
+      "date": "2026-10-08",
+      "realtek_crypto_comparisons": 1440,
+      "synthetic_peer_exchanges": 16,
+      "wireshark_parsed_packets": 80,
+      "new_discrepancies": 0,
+      "scope": "Bounded crypto, synthetic peer and structural parsing; not physical AP or complete third-party authenticator",
+      "implementation_changed": false
+    }
+  }
+}
